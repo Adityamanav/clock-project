@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Clock • Stopwatch • Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Digital Clock & Date -->
+    <div class="clock-section">
+      <div class="time" id="clock">00:00:00</div>
+      <div class="date" id="date">Loading date...</div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="stopwatch">Stopwatch</button>
+      <button class="tab-btn" data-tab="timer">Timer</button>
+    </div>
+
+    <!-- Stopwatch Panel -->
+    <div class="panel active" id="stopwatch">
+      <div class="display" id="stopwatch-display">00:00:00.00</div>
+      <div class="controls">
+        <button class="btn start" id="sw-start">Start</button>
+        <button class="btn stop" id="sw-stop" disabled>Stop</button>
+        <button class="btn reset" id="sw-reset">Reset</button>
+      </div>
+    </div>
+
+    <!-- Timer Panel -->
+    <div class="panel" id="timer">
+      <div class="timer-inputs">
+        <div class="input-group">
+          <label>Hours</label>
+          <input type="number" id="hours" min="0" max="99" value="0">
+        </div>
+        <div class="input-group">
+          <label>Minutes</label>
+          <input type="number" id="minutes" min="0" max="59" value="0">
+        </div>
+        <div class="input-group">
+          <label>Seconds</label>
+          <input type="number" id="seconds" min="0" max="59" value="0">
+        </div>
+      </div>
+      <div class="display" id="timer-display">00:00:00</div>
+      <div class="controls">
+        <button class="btn start" id="tm-start">Start</button>
+        <button class="btn stop" id="tm-stop" disabled>Stop</button>
+        <button class="btn reset" id="tm-reset">Reset</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      created by aditya cse2027
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
